@@ -18,7 +18,7 @@ h2_elementlist = soup.find_all('h2')
 print (title)
 
 # Write to .txt to test the formatting
-with open ('Moby-Dick.txt','w',encoding='utf-8') as file:
+with open ('Moby-Dick.txt', 'w', encoding='utf-8') as file:
     file.write(title)
     for element in h2_elementlist:
         file.write((element.get_text()))
@@ -31,8 +31,9 @@ print('Moby-Dick transcript has been transcribed')
 
 # Write to .csv
 print ('Writing csv file...')
-with open ('MobyTable.csv','w',encoding='utf-8',newline='') as mobTable:
-    csvwriter = csv.writer(mobTable)
+with open ('MobyTable.csv', 'w', encoding='utf-8',newline='') as mobTable:
+    csvwriter = csv.writer(mobTable, delimiter=',')
+    mobTable.write('\ufeff')
     field = ['Header','Content']
     
     #Write header
@@ -43,7 +44,10 @@ with open ('MobyTable.csv','w',encoding='utf-8',newline='') as mobTable:
             if tag.name == 'h2':
                 break
             else:
-                csvwriter.writerow({element.get_text(),tag.get_text()})
+                head = element.get_text(strip=True, separator=' ')+ ' '
+                cont = tag.get_text(strip=True, separator=' ')
+                
+                csvwriter.writerow({head,cont})
 
     print ('MobyTable exported')
         
