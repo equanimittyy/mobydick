@@ -1,3 +1,4 @@
+![Static Badge](https://img.shields.io/badge/Python-purple) ![Static Badge](https://img.shields.io/badge/PowerBI-blue)
 ## Introduction:
 This project was created with the intention to expose myself to technical challenges to further my technical skills in 
 a self-directed ETL/ELT process. Overall, I sought to assess my adaptability to unfamiliar technologies and gain a deeper 
