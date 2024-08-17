@@ -28,7 +28,7 @@ and create the tables I required for visualisation.
 
 The transformation of data in SQL, particularly to delimit the 'content' column and seperate the individual words was a
 difficult challenge. However, through practical experience gained through exercises on StrataScratch, I used my new
-founded skills to utilise the 'substring_index()' function and a common table expression as the basis of the solution to 
+founded skills to utilise nested 'substring_index()' functions and a common table expression as the basis of the solution to 
 my predicament. Through this, I was able to achieve a final result which I aggregated and obtain the count of individual word 
 items.
 
