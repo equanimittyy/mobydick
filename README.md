@@ -18,7 +18,7 @@ live website in my attempts to write a script that would suit my needs.
 
 ### Using MySQL to obtain tables -
 Following the conversion of the HTML data into a usable .csv format (MobyTable.csv), I had imported this into a local instance
-of MySQL (localhost:3306) where I applied direct modifications to the table to create a primary key 'id_index' and an 'isActive'
+of MySQL where I applied direct modifications to the table to create a primary key 'id_index' and an 'isActive'
 column to attempt to transform the data and remove issues with the extraction of data from HTML.
 
 For example, the 'Header' column contained non-header data due to the way the elements in HTML were structured. I had utilised an
@@ -28,7 +28,7 @@ and create the tables I required for visualisation.
 
 The transformation of data in SQL, particularly to delimit the 'content' column and seperate the individual words was a
 difficult challenge. However, through practical experience gained through exercises on StrataScratch, I used my new
-founded skills to utilise the 'substring_index()' function and a common table expression "CTE" as the basis of the solution to 
+founded skills to utilise the 'substring_index()' function and a common table expression as the basis of the solution to 
 my predicament. Through this, I was able to achieve a final result which I aggregated and obtain the count of individual word 
 items.
 
